@@ -1,4 +1,12 @@
-.App{
+body{
   background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
 }
 
+.App{
+  margin: 30px auto;
+    max-width: 600px;
+}
+.App footer{
+  font-size: 11px;
+  margin: 10px 0;
+}

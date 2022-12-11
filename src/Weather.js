@@ -20,28 +20,32 @@ if (ready){return(<div className="Weather">
       <input type="text" placeholder="Enter a city" className="form-control"/>
       </div>
       <div className="col-3">
-      <input type="submit" value ="Search" className= " btn btn-primary"/>
+      <input type="submit" value ="Search" className= " btn btn-light w-100"/>
     
     </div>
     </div>
     </form>
-    
+      <div className="row">
+    <div className="col-6">
     <h1>London</h1>
+    
     <ul>
       <li>Wednesday 07:00</li>
       <li>Cloudly</li>
-      </ul>
-      <div className="rov">
-        <div className="col-6">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/snow.png" alt="Cloudly"/>
-         <h1> {Math.round(temperature)}</h1>
-        </div>
-        <div className="col-6">
-          <ul>
-            <li>Percipitation: 15%</li>
+       <li>Percipitation: 15%</li>
             <li>Humidity:72%</li>
             <li>Wind:30km/h</li>
-          </ul>
+          
+      </ul>
+    </div>
+        <div className="col-6">
+   
+           <h2> {Math.round(temperature)}<small className="unit">°C</small></h2>
+        
+      
+
+          <img src="https://ssl.gstatic.com/onebox/weather/64/snow.png" alt="Cloudly"/>
+      
         </div>
         
       </div>
