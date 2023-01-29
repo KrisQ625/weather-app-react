@@ -54,7 +54,7 @@ if (ready){return(<div className="Weather">
   </div>)
 
 }else{
-  let city="London";
+  let city="Pula";
   const apiKey="ac9185d0f8b9a1boc9ba4b9t42303979";
   let apiUrl =`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
