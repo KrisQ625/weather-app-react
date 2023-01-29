@@ -25,7 +25,7 @@ function handleResponse(response){
 
 }
 
-if (weather.data.ready){return(<div className="Weather">
+if (weatherData.ready){return(<div className="Weather">
 
     <form>
       <div className="row">
