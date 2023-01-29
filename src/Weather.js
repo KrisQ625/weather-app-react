@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import "./Weather.css";
+import FormattedDate from './FormattedDate';
 import axios from "axios";
-
 export default function Weather(){
 
 const [weatherData, setWeatherData]= useState({ready: false});
@@ -16,7 +16,7 @@ function handleResponse(response){
     description:response.data.condition.description,
     humidity:response.data.temperature.humidity,
     icon:response.data.condition.icon,
-    date:"Wednesday"
+    date:new Date (response.data.time*1000),
 
 
 
@@ -43,7 +43,7 @@ if (weather.data.ready){return(<div className="Weather">
     <h1 className='text-capitalize'>{weatherData.city}</h1>
     
     <ul>
-      <li>{weatherData.date}</li>
+      <li><FormattedDate date ={weatherData.date}/> </li>
       <li className='text-capitalize'>{weatherData.description}</li>
       
             <li >Humidity:{Math.round(weatherData.humidity)}%</li>
@@ -67,7 +67,7 @@ if (weather.data.ready){return(<div className="Weather">
   </div>)
 
 }else{
-  let city="Pula";
+  let city="London";
   const apiKey="ac9185d0f8b9a1boc9ba4b9t42303979";
   let apiUrl =`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
