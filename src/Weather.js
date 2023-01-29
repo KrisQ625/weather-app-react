@@ -3,16 +3,29 @@ import "./Weather.css";
 import axios from "axios";
 
 export default function Weather(){
-const [ready,setReady]= useState(false);
-const [temperature, setTemperature]= useState(null);
+
+const [weatherData, setWeatherData]= useState({ready: false});
 
 function handleResponse(response){
   console.log(response.data);
-  setTemperature(response.data.temperature.current);
-  setReady(true);
+  setWeatherData({
+    ready: true,
+    temperature: response.data.temperature.current,
+    wind:response.data.wind.speed,
+    city:response.data.city,
+    description:response.data.condition.description,
+    humidity:response.data.temperature.humidity,
+    icon:response.data.condition.icon,
+    date:"Wednesday"
+
+
+
+
+  });
+
 }
 
-if (ready){return(<div className="Weather">
+if (weather.data.ready){return(<div className="Weather">
 
     <form>
       <div className="row">
@@ -27,24 +40,24 @@ if (ready){return(<div className="Weather">
     </form>
       <div className="row">
     <div className="col-6">
-    <h1>London</h1>
+    <h1 className='text-capitalize'>{weatherData.city}</h1>
     
     <ul>
-      <li>Wednesday 07:00</li>
-      <li>Cloudly</li>
-       <li>Percipitation: 15%</li>
-            <li>Humidity:72%</li>
-            <li>Wind:30km/h</li>
+      <li>{weatherData.date}</li>
+      <li className='text-capitalize'>{weatherData.description}</li>
+      
+            <li >Humidity:{Math.round(weatherData.humidity)}%</li>
+            <li >Wind:{Math.round(weatherData.wind)}km/h</li>
           
       </ul>
     </div>
         <div className="col-6">
    
-           <h2> {Math.round(temperature)}<small className="unit">°C</small></h2>
+           <h2> {Math.round(weatherData.temperature)}<small className="unit">°C</small></h2>
         
       
 
-          <img src="https://ssl.gstatic.com/onebox/weather/64/snow.png" alt="Cloudly"/>
+          <img src={weatherData.icon} alt="Cloudly"/>
       
         </div>
         
