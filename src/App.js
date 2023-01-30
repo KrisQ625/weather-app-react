@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './App.css';
 import Weather from "./Weather";
 function App() {
@@ -6,7 +6,7 @@ function App() {
 <div className='container'>
   <Weather/>
   <footer> This project was created by Kristina Vujnovac and is {""}
-    <a href="https://github.com/KrisQ625/weather-app-react" target="_blank" rel="noreferrer">open sourced</a>
+    <a href="https://github.com/KrisQ625/weather-app-react" target="_blank" rel=" noopener noreferrer">open sourced</a>
   </footer>
   </div>
   </div>
