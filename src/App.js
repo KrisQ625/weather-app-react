@@ -4,7 +4,7 @@ import Weather from "./Weather";
 function App() {
   return (<div className='App'>
 <div className='container'>
-  <Weather/>
+  <Weather defaultCity = "Pula"/>
   <footer> This project was created by Kristina Vujnovac and is {""}
     <a href="https://github.com/KrisQ625/weather-app-react" target="_blank" rel=" noopener noreferrer">open sourced</a>
   </footer>
