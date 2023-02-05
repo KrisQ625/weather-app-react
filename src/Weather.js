@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Weather.css";
-import FormattedDate from './FormattedDate';
+import Weatherinfo from "./Weatherinfo";
 import axios from "axios";
 export default function Weather(props){
 
@@ -38,33 +38,12 @@ if (weatherData.ready){return(<div className="Weather">
     </div>
     </div>
     </form>
-      <div className="row">
-    <div className="col-6">
-    <h1 className='text-capitalize'>{weatherData.city}</h1>
-    
-    <ul>
-      <li><FormattedDate date ={weatherData.date}/> </li>
-      <li className='text-capitalize'>{weatherData.description}</li>
-      
-            <li >Humidity:{Math.round(weatherData.humidity)}%</li>
-            <li >Wind:{Math.round(weatherData.wind)}km/h</li>
-          
-      </ul>
-    </div>
-        <div className="col-6">
-   
-           <h2> {Math.round(weatherData.temperature)}<small className="unit">°C</small></h2>
-        
-      
+    <Weatherinfo data={weatherData}/>
 
-          <img src={weatherData.icon} alt="Cloudly"/>
-      
-        </div>
-        
-      </div>
 
     
-  </div>)
+  </div>
+  );
 
 }else{
 

@@ -1,5 +1,5 @@
 .Weather{
-  border: 1px solid #242525;
+  border: 1px solid #ebefef;
   background-color:#fdfdfc ;
   border-radius: 10px;
   padding: 16px;
@@ -8,10 +8,10 @@
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif
 
 }
-.Weather h1{color: #251c4e;
+.Weather h1{color: #2d2d2e;
   font-size: 38px;
-  font-weight: 700;
-  font-family: 'Dancing Script',Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-family: 'Dancing Script';
   font-style: italic;
   padding-left: 10px;
   line-height: 48px;
