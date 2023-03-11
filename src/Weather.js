@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import "./Weather.css";
 import Weatherinfo from "./Weatherinfo";
 import axios from "axios";
+
+
 export default function Weather(props){
 
 const [weatherData, setWeatherData]= useState({ready: false});
@@ -16,7 +18,9 @@ function handleResponse(response){
     city:response.data.city,
     description:response.data.condition.description,
     humidity:response.data.temperature.humidity,
-    icon:response.data.condition.icon,
+    icon: response.data.condition.icon,
+    iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+     
     date:new Date (response.data.time*1000),
 
 
