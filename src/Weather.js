@@ -19,7 +19,7 @@ function handleResponse(response){
     description:response.data.condition.description,
     humidity:response.data.temperature.humidity,
     icon: response.data.condition.icon,
-    iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+    icon_url: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
      
     date:new Date (response.data.time*1000),
 
@@ -50,7 +50,8 @@ if (weatherData.ready){return(<div className="Weather">
     <form on onSubmit={handleSubmit}>
       <div className="row">
       <div className="col-9">
-      <input type="text" placeholder="Enter a city" className="form-control" onChange={handleCityChange}/>
+      <input type="text" placeholder="Enter a city"   className="form-control" onChange={handleCityChange}/>
+      
       </div>
       <div className="col-3">
       <input type="submit" value ="Search" className= " btn btn-light w-100"/>

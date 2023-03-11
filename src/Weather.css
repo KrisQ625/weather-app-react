@@ -19,14 +19,16 @@
 
 }
 .Weather h2{
-  font-weight: 700;
+  font-family: 'Dancing Script';
+    font-style: italic;
+  font-weight: 3000;
   line-height: 48px;
   margin: 20px 0 10px;
 
 }
 .unit{
   position: relative;
-  top: -20px;
+  top: -25px;
   font-size: 13px;
   font-weight: lighter;
   opacity: 1;
