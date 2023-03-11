@@ -9,8 +9,9 @@ export default function Weatherinfo (props){
     <div className="col-6">
     <h1 className='text-capitalize'>{props.data.city}</h1>
     
-    <ul>
-      <li><FormattedDate date ={props.data.date}/> </li>
+  
+      <div><FormattedDate date ={props.data.date}/> </div>
+      <ul>
       <li className='text-capitalize'>{props.data.description}</li>
       
             <li >Humidity:{Math.round(props.data.humidity)}%</li>

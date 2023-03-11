@@ -12,7 +12,7 @@ let days= ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday","Friday","Satur
     minutes= `0${minutes}`;
   }
 return (
-  <div>{day} {hours}:{minutes}</div>
+  <div className="date">{day} {hours}:{minutes}</div>
 );
 
   

@@ -8,40 +8,53 @@
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif
 
 }
-.Weather h1{color: #2d2d2e;
-  font-size: 38px;
-  font-weight: 500;
-  font-family: 'Dancing Script';
-  font-style: italic;
+.Weather h1{
+  font-size: 53px;
+   font-style: italic;
+  font-family:'Dancing Script' ;
   padding-left: 10px;
   line-height: 48px;
-  margin: 20px 0 10px;
+  margin: 40px;
+  padding-left: 60px;
+  color: #132b43;
 
 }
 .Weather h2{
+  font-style: italic;
   font-family: 'Dancing Script';
-    font-style: italic;
-  font-weight: 3000;
-  line-height: 48px;
-  margin: 20px 0 10px;
+ font-weight: 100;
+  font-size: 80px;
+ opacity: 1;
+  line-height: 80px;
+  margin: 100px 0 10px;
+  color: #1b4065;
 
 }
 .unit{
   position: relative;
-  top: -25px;
-  font-size: 13px;
+  top: -50px;
+  font-size: 15px;
   font-weight: lighter;
   opacity: 1;
   text-decoration: none;
 }
 .Weather ul{
-  margin: 0;
-  padding-left: 10px;
+  margin: 30px auto;
+  padding-left: 20px;
 }
 .Weather li{
-  font: size 13px;
-  font-weight: 100;
+  font: size 10px;
+  font-weight: 500;
   list-style: none;
   color: #547793;
 
+}
+.Weather img {
+  width: 200px;
+}
+.date {
+  font-style: italic;
+  font-weight: 100;
+  color:#547793 ;
+  
 }
